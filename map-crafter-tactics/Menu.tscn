@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhuy7nkyiv7qr"]
+
+[ext_resource type="Script" uid="uid://dmdxd1jd1mcie" path="res://menu.gd" id="1_uubjt"]
+[ext_resource type="VideoStream" uid="uid://bctipg3itojtc" path="res://Menu.ogv" id="2_5yleq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uubjt")
+
+[node name="BackGroundVideo" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_5yleq")
+autoplay = true
+expand = true
+loop = true
+buffering_msec = 1000
+
+[node name="DarkOverlay" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 45.0
+offset_right = 502.0
+offset_bottom = 226.0
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 269.0
+offset_right = 679.0
+offset_bottom = 401.0
+
+[node name="NewSceneButton" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+
+[node name="LoadSceneButton" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+
+[node name="SettingsButton" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+
+[connection signal="finished" from="BackGroundVideo" to="." method="_on_back_ground_video_finished"]

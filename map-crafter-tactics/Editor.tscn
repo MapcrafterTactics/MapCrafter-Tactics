@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://b67vsm87w37rn"]
+
+[node name="Editor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_right = 212.0
+offset_bottom = 49.0
+current_tab = 0
+
+[node name="TerrainLayer" type="Control" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Button" type="Button" parent="TabContainer/TerrainLayer"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 127.0
+offset_bottom = 54.0
+
+[node name="CharacterLayer" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Button" type="Button" parent="TabContainer/CharacterLayer"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="ItemList" type="ItemList" parent="TabContainer/CharacterLayer"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BattleLayer" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Button" type="Button" parent="TabContainer/BattleLayer"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="MainViewport" type="Node3D" parent="."]
+
+[node name="GridMap" type="GridMap" parent="MainViewport"]
