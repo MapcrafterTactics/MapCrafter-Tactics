@@ -35,9 +35,9 @@ color = Color(0, 0, 0, 0.08235294)
 [node name="ButtonsContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 480.0
-offset_top = 270.0
+offset_top = 269.0
 offset_right = 800.0
-offset_bottom = 450.0
+offset_bottom = 449.0
 
 [node name="NewSceneButton" type="Button" parent="ButtonsContainer"]
 layout_mode = 2
