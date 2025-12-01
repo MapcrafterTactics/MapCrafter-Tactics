@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dlkuxuq4vacw2"]
 
-[ext_resource type="VideoStream" uid="uid://dexjydpgwcpdj" path="res://Menu.ogv" id="1_myinc"]
+[ext_resource type="VideoStream" uid="uid://bctipg3itojtc" path="res://Menu.ogv" id="1_myinc"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
