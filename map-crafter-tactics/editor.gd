@@ -1,11 +1,31 @@
 extends Control
 
+@onready var buttons_panel = $PanelContainer
+@onready var buttons_box = $PanelContainer/VBoxContainer
+@onready var side_panel = $Panel
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var shift_distance = 160
+
+func _ready():
+	for element in buttons_box.get_children():
+		if element is Button:
+			element.pressed.connect(_on_any_button_pressed)
+
+func _on_any_button_pressed():
+	var tween = create_tween()
+	tween.set_parallel(true)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	tween.tween_property(
+		buttons_panel,
+		"position",
+		buttons_panel.position + Vector2(shift_distance, 0),
+		0.4
+	)
+
+	tween.tween_property(
+		side_panel,
+		"position",
+		side_panel.position + Vector2(shift_distance, 0),
+		0.4
+	)
