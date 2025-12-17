@@ -7,13 +7,13 @@ func _ready():
 	$ButtonsContainer/ExitButton.pressed.connect(_on_exit_pressed)
 	
 func _on_new_scene_pressed():
-	get_tree().change_scene_to_file("res://Editor.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Editor.tscn")
 
 func _on_load_scene_pressed():
-	get_tree().change_scene_to_file("res://Saved scenes.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Saved scenes.tscn")
 
 func _on_settings_pressed():
-	get_tree().change_scene_to_file("res://Settings.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Settings.tscn")
 
 func _on_exit_pressed():
 	get_tree().quit()

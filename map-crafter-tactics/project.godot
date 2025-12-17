@@ -15,6 +15,11 @@ run/main_scene="uid://b67vsm87w37rn"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+BuildManager="*res://GlobalScripts/BuildManager.gd"
+BlockLibrary="*res://GlobalScripts/BlockLibrary.gd"
+
 [display]
 
 window/size/viewport_width=1280

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhuy7nkyiv7qr"]
 
-[ext_resource type="Script" uid="uid://dmdxd1jd1mcie" path="res://menu.gd" id="1_uubjt"]
-[ext_resource type="VideoStream" uid="uid://bctipg3itojtc" path="res://Menu.ogv" id="2_5yleq"]
+[ext_resource type="Script" uid="uid://dmdxd1jd1mcie" path="res://Scripts/menu.gd" id="1_6pedr"]
+[ext_resource type="VideoStream" uid="uid://bctipg3itojtc" path="res://Menu.ogv" id="2_syfuq"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_uubjt")
+script = ExtResource("1_6pedr")
 
 [node name="BackGroundVideo" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_5yleq")
+stream = ExtResource("2_syfuq")
 autoplay = true
 expand = true
 buffering_msec = 1000
